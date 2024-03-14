@@ -1,0 +1,1 @@
+﻿# Works Cited in Statistics for Computational Biology ProjectsChampely, Stephane. 2020. Pwr: Basic Functions for Power Analysis. https://CRAN.R-project.org/package=pwr.Cohen, Jacob. 1988. Statistical Power Analysis for the Behavioral Sciences. Hillsdale, NJ: Erlbaum.
