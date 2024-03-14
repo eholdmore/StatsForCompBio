@@ -5,4 +5,4 @@
 .Ruserdata
 
 # Mac things
-.DS_Store
+*.DS_Store
