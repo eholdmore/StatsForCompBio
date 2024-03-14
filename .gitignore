@@ -1,4 +1,8 @@
+# R things
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
+
+# Mac things
+.DS_Store
