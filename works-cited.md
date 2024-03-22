@@ -30,4 +30,16 @@ Lee, K.H., Pedroza, C., Avritscher, E.B., Mosquera, R.A. and Tyson, J.E., 2023. 
 
 Liu, L., Shih, Y.C.T., Strawderman, R.L., Zhang, D., Johnson, B.A. and Chai, H., 2019. Statistical analysis of zero-inflated nonnegative continuous data. Statistical Science, 34(2), pp.253-279. 
 
-Fukami, T., and Nick Henderson. W4: GLM with zero-inflated data. Biology 202: Ecological Statistics. https://fukamilab.github.io/BIO202/04-C-zero-data.html
+Fukami, T., and Nick Henderson. W4: GLM with zero-inflated data. Biology 202: Ecological Statistics. https://fukamilab.github.io/BIO202/04-C-zero-data.html
+
+## Data Visualization
+
+Cohen-Tanugi, Jess. 2019. Design Principles for Visualization. Havard Kennedy School. https://www.hks.harvard.edu/sites/default/files/Academic%20Dean's%20Office/communications_program/workshop-materials/pp_jess_cohen-tanugi_design_principles_for_visualization_-_2-20-19.pdf
+
+Wilke, Claus O. 2019. Fundamentals of Data Visualization. O'Reilly Media. https://clauswilke.com/dataviz/index.html
+
+Nusrat, S., Harbig, T. and Gehlenborg, N., 2019, June. Tasks, techniques, and tools for genomic data visualization. In Computer Graphics Forum (Vol. 38, No. 3, pp. 781-805).
+
+## Ethical Considerations
+
+Fleischmann, K.R., and W.A. Wallace. 2017. Ethical Implications of Computational Modeling. National Academy of Enginerring. https://www.nae.edu/168653/Ethical-Implications-of-Computational-Modeling
