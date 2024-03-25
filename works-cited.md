@@ -1,4 +1,5 @@
-# Works Cited in Statistics for Computational Biology ProjectsChampely, Stephane. 2020. Pwr: Basic Functions for Power Analysis. https://CRAN.R-project.org/package=pwr.Cohen, Jacob. 1988. Statistical Power Analysis for the Behavioral Sciences. Hillsdale, NJ: Erlbaum.
+# Works Cited in Statistics for Computational Biology ProjectsBanfelder, Jason. 2021. Quantitative Understanding in Biology: 1.6 Multiple Hypothesis Testing and Non-parametric Tests. https://physiology.med.cornell.edu/people/banfelder/qbio/resources_2021/2021_1.6_multiple_hypotheses_and_non_parametric_tests.pdf
+Champely, Stephane. 2020. Pwr: Basic Functions for Power Analysis. https://CRAN.R-project.org/package=pwr.Cohen, Jacob. 1988. Statistical Power Analysis for the Behavioral Sciences. Hillsdale, NJ: Erlbaum.
 
 Feng, Fred. 2021. Interactive visualization of probability distributions. https://probstats.org/
 
@@ -10,7 +11,13 @@ Hurlbert, Stuart H. 1984. Pseudoreplication and the design of ecological field e
 
 Kunin, Daniel. 2016. Seeing Theory. Chapter 3: Probability Distributions. https://seeing-theory.brown.edu/probability-distributions/index.html 
 
+Skidmore, Z., Griffith, M., Griffith, O., and Cotto, K. 2019. Genomic Data Visualization and Interpretation. https://genviz.org/ 
+
 # Further Reading & Examples
+
+## General
+
+Akalin, A. 2020. Computational Genomics with R. https://compgenomr.github.io/book/
 
 ## Probability
 
@@ -36,9 +43,11 @@ Fukami, T., and Nick Henderson. W4: GLM with zero-inflated data. Biology 202: Ec
 
 Cohen-Tanugi, Jess. 2019. Design Principles for Visualization. Havard Kennedy School. https://www.hks.harvard.edu/sites/default/files/Academic%20Dean's%20Office/communications_program/workshop-materials/pp_jess_cohen-tanugi_design_principles_for_visualization_-_2-20-19.pdf
 
-Wilke, Claus O. 2019. Fundamentals of Data Visualization. O'Reilly Media. https://clauswilke.com/dataviz/index.html
+Skidmore, Z., Griffith, M., Griffith, O., and Cotto, K. 2019. Genomic Data Visualization and Interpretation. https://genviz.org/ 
 
 Nusrat, S., Harbig, T. and Gehlenborg, N., 2019, June. Tasks, techniques, and tools for genomic data visualization. In Computer Graphics Forum (Vol. 38, No. 3, pp. 781-805).
+
+Wilke, Claus O. 2019. Fundamentals of Data Visualization. O'Reilly Media. https://clauswilke.com/dataviz/index.html
 
 ## Ethical Considerations
 

@@ -10,9 +10,15 @@ Power analysis calculations in R: How many samples do you need to detect a certa
 
 Interactive simulation from [Seeing Theory](https://seeing-theory.brown.edu/probability-distributions/index.html) demonstrating probability concepts.
 
+1. After following the link above, click on the "Discrete and Continuous" box on the right.
+2. Use the buttons and dropdown menu to explore the forms of different probability distributions. What types of data might be suitable for each?
+
+ProbStats.org also offers an [interactive visualzation of probability distributions](https://probstats.org/) that you may find useful. 
+
 ## Activity 3: Correcting for Multiple Comparisons
 
 Hands-on multiple comparisons analysis in R.
+Adapted from [Adapted from Quantitative Understanding in Biology: 1.6 Multiple Hypothesis Testing and Non-parametric Tests](https://physiology.med.cornell.edu/people/banfelder/qbio/resources_2021/2021_1.6_multiple_hypotheses_and_non_parametric_tests.pdf) by Jason Banfelder
 
 ## Activity 4: Principles of Data Visualization
 
