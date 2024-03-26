@@ -1,6 +1,8 @@
 # Works Cited in Statistics for Computational Biology ProjectsBanfelder, Jason. 2021. Quantitative Understanding in Biology: 1.6 Multiple Hypothesis Testing and Non-parametric Tests. https://physiology.med.cornell.edu/people/banfelder/qbio/resources_2021/2021_1.6_multiple_hypotheses_and_non_parametric_tests.pdf
 Champely, Stephane. 2020. Pwr: Basic Functions for Power Analysis. https://CRAN.R-project.org/package=pwr.Cohen, Jacob. 1988. Statistical Power Analysis for the Behavioral Sciences. Hillsdale, NJ: Erlbaum.
 
+Diachkov, Dima. 2024. Automatic outlier detection in R with DBSCAN. Dev Genius. https://blog.devgenius.io/outlier-detection-in-r-with-dbscan-dd54ebc5404d
+
 Feng, Fred. 2021. Interactive visualization of probability distributions. https://probstats.org/
 
 Fukami, T., and Nick Henderson. W4: GLM with zero-inflated data. Biology 202: Ecological Statistics. https://fukamilab.github.io/BIO202/04-C-zero-data.html
@@ -11,6 +13,8 @@ Hurlbert, Stuart H. 1984. Pseudoreplication and the design of ecological field e
 
 Kunin, Daniel. 2016. Seeing Theory. Chapter 3: Probability Distributions. https://seeing-theory.brown.edu/probability-distributions/index.html 
 
+Scott, James. 2021. Data Science in R: A Gentle Introduction. https://bookdown.org/jgscott/DSGI/
+
 Skidmore, Z., Griffith, M., Griffith, O., and Cotto, K. 2019. Genomic Data Visualization and Interpretation. https://genviz.org/ 
 
 # Further Reading & Examples
@@ -19,7 +23,7 @@ Skidmore, Z., Griffith, M., Griffith, O., and Cotto, K. 2019. Genomic Data Visua
 
 Akalin, A. 2020. Computational Genomics with R. https://compgenomr.github.io/book/
 
-## Probability
+## Probability & Data Transformations
 
 Nowak, Robert. 2011. Lecture 2: Review of Probability Theory. ECE 830 Statistical Signal Processing. https://nowak.ece.wisc.edu/ece830/ece830_fall11_lecture2.pdf
 
@@ -31,7 +35,15 @@ Ross, Sheldon M. 2014. Introduction to Probability Models. Academic Press.
 
 Pitman, Jim. 2012. Probability. Springer Science & Business Media.
 
+Myers, Fraser. 2020. Data Transformations. https://rpubs.com/frasermyers/627589
+
+## Repeated Measures 
+
+Repeated Measures Analysis with R. UCLA Advanced Research Computing. Statistical Methods and Data Analytics. https://stats.oarc.ucla.edu/r/seminars/repeated-measures-analysis-with-r/
+
 ## Zero-Inflated Data Analysis
+
+Jiang, R., Sun, T., Song, D. and Li, J.J., 2022. Statistics or biology: the zero-inflation controversy about scRNA-seq data. Genome biology, 23(1), p.31.
 
 Lee, K.H., Pedroza, C., Avritscher, E.B., Mosquera, R.A. and Tyson, J.E., 2023. Evaluation of negative binomial and zero-inflated negative binomial models for the analysis of zero-inflated count data: application to the telemedicine for children with medical complexity trial. Trials, 24(1), p.613.
 
