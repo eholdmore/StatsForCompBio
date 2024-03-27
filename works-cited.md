@@ -3,6 +3,8 @@
 
 Diachkov, Dima. 2024. Automatic outlier detection in R with DBSCAN. Dev Genius. https://blog.devgenius.io/outlier-detection-in-r-with-dbscan-dd54ebc5404d
 
+Di Leo, G. and Sardanelli, F., 2020. Statistical significance: p value, 0.05 threshold, and applications to radiomics—reasons for a conservative approach. European radiology experimental, 4, pp.1-8.
+
 Feng, Fred. 2021. Interactive visualization of probability distributions. https://probstats.org/
 
 Fukami, T., and Nick Henderson. W4: GLM with zero-inflated data. Biology 202: Ecological Statistics. https://fukamilab.github.io/BIO202/04-C-zero-data.html
@@ -13,9 +15,13 @@ Hurlbert, Stuart H. 1984. Pseudoreplication and the design of ecological field e
 
 Kunin, Daniel. 2016. Seeing Theory. Chapter 3: Probability Distributions. https://seeing-theory.brown.edu/probability-distributions/index.html 
 
+Lindelev, J. K. 2019. Common statistical tests are linear models. https://lindeloev.github.io/tests-as-linear/ 
+
 Scott, James. 2021. Data Science in R: A Gentle Introduction. https://bookdown.org/jgscott/DSGI/
 
 Skidmore, Z., Griffith, M., Griffith, O., and Cotto, K. 2019. Genomic Data Visualization and Interpretation. https://genviz.org/ 
+
+Sullivan, G.M. and Feinn, R., 2012. Using effect size—or why the P value is not enough. Journal of graduate medical education, 4(3), pp.279-282.
 
 # Further Reading & Examples
 

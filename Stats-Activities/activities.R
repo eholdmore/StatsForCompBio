@@ -1,6 +1,6 @@
 ### Activities for Statistics for Computational Biology Projects Workshop ###
 ### Erica M. Holdmore ###
-### Last updated: March 14, 2024 ###
+### Last updated: March 26, 2024 ###
 
 #### Activity 1: Power Analysis ####
 
@@ -106,6 +106,7 @@ library(ggplot2)
 ## Choose your own adventure! Pick ONE of the example plots below.
 
 #### Gene Coverage Plots ####
+# https://genviz.org/module-03-genvisr/0003/04/01/gencov_GenVisR/
 # load the dataset
 covData <- read.delim("http://genomedata.org/gen-viz-workshop/GenVisR/STAT1_mm9_coverage.tsv")
 
@@ -113,7 +114,8 @@ covData <- read.delim("http://genomedata.org/gen-viz-workshop/GenVisR/STAT1_mm9_
 # rename the columns
 colnames(covData) <- c("chromosome", "start", "end", "TAC245", "TAC265")
 
-# create a function to split the dataframe into lists of dataframes for each sample
+# create a function to split the dataframe into lists of dataframes 
+# one for each sample ("TAC245" and "TAC265")
 samples <- c("TAC245", "TAC265")
 a <- function(x, y){
   col_names <- c("chromosome", "end", x)
@@ -127,23 +129,23 @@ covData <- lapply(samples, a, covData)
 names(covData) <- samples
 
 # install and load the BSgenome package and list available genomes
-#if (!requireNamespace("BiocManager", quietly = TRUE))
-#    install.packages("BiocManager")
-#BiocManager::install("BSgenome", version = "3.8")
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install("BSgenome", version = "3.8")
 library("BSgenome")
 available.genomes()
 
 # install and load the mm9 BSgenome from UCSC
 #if (!requireNamespace("BiocManager", quietly = TRUE))
 #    install.packages("BiocManager")
-#BiocManager::install("BSgenome.Mmusculus.UCSC.mm9", version = "3.8")
+BiocManager::install("BSgenome.Mmusculus.UCSC.mm9", version = "3.18")
 library("BSgenome.Mmusculus.UCSC.mm9")
 genomeObject <- BSgenome.Mmusculus.UCSC.mm9
 
 # Install and load a TxDb object for the mm9 genome
 #if (!requireNamespace("BiocManager", quietly = TRUE))
 #    install.packages("BiocManager")
-#BiocManager::install("TxDb.Mmusculus.UCSC.mm9.knownGene", version = "3.8")
+BiocManager::install("TxDb.Mmusculus.UCSC.mm9.knownGene", version = "3.18")
 library("TxDb.Mmusculus.UCSC.mm9.knownGene")
 TxDbObject <- TxDb.Mmusculus.UCSC.mm9.knownGene
 
@@ -156,9 +158,21 @@ end <- as.numeric(max(covData[[1]]$end))
 grObject <- GRanges(seqnames=c("chr1"), ranges=IRanges(start=start, end=end))
 
 # Here's a place to start plotting:
+#if (!requireNamespace("BiocManager", quietly = TRUE))
+#    install.packages("BiocManager")
+BiocManager::install("GenVisR", version = "3.18")
+library("GenVisR")
 genCov(x=covData, txdb=TxDbObject, gr=grObject, genome=genomeObject, cov_plotType="line")
 
+# Check out what else genCov() can do
+?genCov()
+
+# Try playing around with options to make changes to the plot above (color, labels, etc.)
+
 #### Variant Allele Frequency Distributions ####
+# https://genviz.org/module-02-r/0002/03/03/ggplot2_exercises/
+#install.packages("ggplot2")
+library(ggplot2)
 # load the dataset
 variantData <- read.delim("http://genomedata.org/gen-viz-workshop/intro_to_ggplot2/ggplot2ExampleData.tsv")
 variantData <- variantData[variantData$dataset == "discovery",][1:300,]
@@ -168,18 +182,18 @@ ggplot() + geom_violin(data=variantData, aes(x=Simple_name, y=tumor_VAF)) +
   theme(axis.text.x=element_text(angle=90, hjust=1)) + 
   xlab("Sample") + ylab("Variant Allele Fraction")
 
-ggplot(data=variantData, aes(x=Simple_name, y=tumor_VAF)) + 
-  geom_violin(aes(fill=Simple_name)) + geom_jitter(width=.1, alpha=.5) + 
-  theme(axis.text.x=element_text(angle=90, hjust=1), legend.position="none") + 
-  xlab("Sample") + ylab("Variant Allele Fraction")
+# Check out what else genCov() can do
+?geom_violin()
+
+# Try playing around with options to make changes to the plot above (color, labels, etc.)
 
 #### Copy Number Frequency Plots ####
-
+# https://genviz.org/module-03-genvisr/0003/05/01/cnFreq_GenVisR/
 # install.packages("stringr")
 library("stringr")
 
 # get locations of all cn files
-files <- Sys.glob("~/Desktop/*cc2.tsv")
+files <- Sys.glob("cc2_files/*cc2.tsv")
 
 # create function to read in and format data
 a <- function(x){
@@ -204,7 +218,12 @@ cnData <- do.call("rbind", cnData)
 
 # Here's a place to start plotting:
 cnFreq(cnData, genome="hg19")
-
-# focus on one gene using ggplot2
+# Alternatively, focus on one gene
 layer1 <- geom_vline(xintercept=c(39709170))
 cnFreq(cnData, genome="hg19", plotChr="chr17", plotLayer=layer1)
+
+# Check out what else genCov() can do
+?geom_violin()
+
+# Try playing around with options to make changes to the plot above (color, labels, etc.)
+
