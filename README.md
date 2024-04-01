@@ -11,3 +11,7 @@ This repository contains documentation for a workshop on Statistics for Computat
 5. Statistical Methods for Genomics
 6. Interpretation and Data Visualization
 7. Ethical Considerations and Challenges
+
+# Workshop Recording
+
+This workshop was given for the DFCI Department of Data Science on March 27, 2024 and the [recording is available](https://www.youtube.com/watch?v=f-ARQSAd1BU) on the Department's Youtube channel.
