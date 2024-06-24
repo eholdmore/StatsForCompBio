@@ -1,5 +1,11 @@
-# Works Cited in Statistics for Computational Biology ProjectsBanfelder, Jason. 2021. Quantitative Understanding in Biology: 1.6 Multiple Hypothesis Testing and Non-parametric Tests. https://physiology.med.cornell.edu/people/banfelder/qbio/resources_2021/2021_1.6_multiple_hypotheses_and_non_parametric_tests.pdf
-Champely, Stephane. 2020. Pwr: Basic Functions for Power Analysis. https://CRAN.R-project.org/package=pwr.Cohen, Jacob. 1988. Statistical Power Analysis for the Behavioral Sciences. Hillsdale, NJ: Erlbaum.
+
+# Works Cited in Statistics for Computational Biology Projects
+
+Banfelder, Jason. 2021. Quantitative Understanding in Biology: 1.6 Multiple Hypothesis Testing and Non-parametric Tests. https://physiology.med.cornell.edu/people/banfelder/qbio/resources_2021/2021_1.6_multiple_hypotheses_and_non_parametric_tests.pdf
+
+Champely, Stephane. 2020. Pwr: Basic Functions for Power Analysis. https://CRAN.R-project.org/package=pwr.
+
+Cohen, Jacob. 1988. Statistical Power Analysis for the Behavioral Sciences. Hillsdale, NJ: Erlbaum.
 
 Diachkov, Dima. 2024. Automatic outlier detection in R with DBSCAN. Dev Genius. https://blog.devgenius.io/outlier-detection-in-r-with-dbscan-dd54ebc5404d
 
@@ -10,6 +16,8 @@ Feng, Fred. 2021. Interactive visualization of probability distributions. https:
 Fukami, T., and Nick Henderson. W4: GLM with zero-inflated data. Biology 202: Ecological Statistics. https://fukamilab.github.io/BIO202/04-C-zero-data.html
 
 Glen, Stephanie. 2020. Different Probability Distributions in One Picture. Data Science Central. https://www.datasciencecentral.com/different-probability-distributions-in-one-picture/
+
+Hicks, S. C., Townes, F. W., Teng, M., & Irizarry, R. A. 2018. Missing data and technical variability in single-cell RNA-sequencing experiments. Biostatistics, 19(4), 562-578. https://academic.oup.com/biostatistics/article/19/4/562/4599254
 
 Hurlbert, Stuart H. 1984. Pseudoreplication and the design of ecological field experiments, Ecological Monographs 54(2) pp. 187 - 211.
 
@@ -69,4 +77,4 @@ Wilke, Claus O. 2019. Fundamentals of Data Visualization. O'Reilly Media. https:
 
 ## Ethical Considerations
 
-Fleischmann, K.R., and W.A. Wallace. 2017. Ethical Implications of Computational Modeling. National Academy of Enginerring. https://www.nae.edu/168653/Ethical-Implications-of-Computational-Modeling
+Fleischmann, K.R., and W.A. Wallace. 2017. Ethical Implications of Computational Modeling. National Academy of Enginerring. https://www.nae.edu/168653/Ethical-Implications-of-Computational-Modeling
