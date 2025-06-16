@@ -8,10 +8,12 @@ This folder contains the materials for the five activities included in the works
 ```r
 install.packages("renv")
 renv::restore()
+```
 
 Alternative: If you have issues with `renv`, use the setup script:
 ```r
 source("setup.R")
+```
 
 ## Activity 1: Sample Size & Power Analysis
 
