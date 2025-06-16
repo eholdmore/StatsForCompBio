@@ -2,6 +2,17 @@
 
 This folder contains the materials for the five activities included in the workshop.
 
+### Installation Options
+
+**Recommended**: Use `renv` for exact package versions:
+```r
+install.packages("renv")
+renv::restore()
+
+Alternative: If you have issues with `renv`, use the setup script:
+```r
+source("setup.R")
+
 ## Activity 1: Sample Size & Power Analysis
 
 Power analysis calculations in R: How many samples do you need to detect a certain effect? What power do you have to detect signal with given a certain sample size?

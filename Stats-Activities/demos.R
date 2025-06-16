@@ -1,6 +1,10 @@
 ### Demos for Statistics for Computational Biology Projects Workshop ###
 ### Erica M. Holdmore ###
-### Last updated: March 26, 2024 ###
+### Last updated: June 16, 2025 ###
+
+#### Setup Environment ####
+install.packages("renv")
+renv::restore()
 
 #### Outlier Analysis ####
 # install.packages("ggplot2")
@@ -162,3 +166,4 @@ ggplot(data1, aes(x = predictor, y = binom_data)) +
   geom_point(alpha = 0.2) +
   geom_smooth(method = "glm", method.args = list(family = "binomial"), color = "red") +
   xlab("HRD Score") + ylab("BRCA Status")
+

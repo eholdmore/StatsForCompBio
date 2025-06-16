@@ -2,6 +2,10 @@
 ### Erica M. Holdmore ###
 ### Last updated: June 16, 2025 ###
 
+#### Setup Environment ####
+install.packages("renv")
+renv::restore()
+
 #### Activity 1: Power Analysis ####
 
 # load package
@@ -199,21 +203,21 @@ names(covData) <- samples
 # install and load the BSgenome package and list available genomes
 if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
-BiocManager::install("BSgenome", version = "3.8")
+BiocManager::install("BSgenome")
 library("BSgenome")
 available.genomes()
 
 # install and load the mm9 BSgenome from UCSC
 #if (!requireNamespace("BiocManager", quietly = TRUE))
 #    install.packages("BiocManager")
-BiocManager::install("BSgenome.Mmusculus.UCSC.mm9", version = "3.18")
+BiocManager::install("BSgenome.Mmusculus.UCSC.mm9")
 library("BSgenome.Mmusculus.UCSC.mm9")
 genomeObject <- BSgenome.Mmusculus.UCSC.mm9
 
 # Install and load a TxDb object for the mm9 genome
 #if (!requireNamespace("BiocManager", quietly = TRUE))
 #    install.packages("BiocManager")
-BiocManager::install("TxDb.Mmusculus.UCSC.mm9.knownGene", version = "3.18")
+BiocManager::install("TxDb.Mmusculus.UCSC.mm9.knownGene")
 library("TxDb.Mmusculus.UCSC.mm9.knownGene")
 TxDbObject <- TxDb.Mmusculus.UCSC.mm9.knownGene
 
@@ -228,7 +232,7 @@ grObject <- GRanges(seqnames=c("chr1"), ranges=IRanges(start=start, end=end))
 # Here's a place to start plotting:
 #if (!requireNamespace("BiocManager", quietly = TRUE))
 #    install.packages("BiocManager")
-BiocManager::install("GenVisR", version = "3.18")
+BiocManager::install("GenVisR")
 library("GenVisR")
 genCov(x=covData, txdb=TxDbObject, gr=grObject, genome=genomeObject, cov_plotType="line")
 
