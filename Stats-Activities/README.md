@@ -15,16 +15,20 @@ Interactive simulation from [Seeing Theory](https://seeing-theory.brown.edu/prob
 
 ProbStats.org also offers an [interactive visualzation of probability distributions](https://probstats.org/) that you may find useful. 
 
-## Activity 3: Correcting for Multiple Comparisons
+## Activity 3: GLMs in Action
+
+Simulate gene expression count data and fit both Poisson and negative binomial generalized linear models (GLMs) to it. You'll compare model fits, assess overdispersion, and interpret coefficients, with a focus on log fold change. This activity introduces concepts foundational to RNAseq differential expression tools like DESeq2.
+
+## Activity 4: Correcting for Multiple Comparisons
 
 Hands-on multiple comparisons analysis in R.
 Adapted from [Adapted from Quantitative Understanding in Biology: 1.6 Multiple Hypothesis Testing and Non-parametric Tests](https://physiology.med.cornell.edu/people/banfelder/qbio/resources_2021/2021_1.6_multiple_hypotheses_and_non_parametric_tests.pdf) by Jason Banfelder
 
-## Activity 4: Principles of Data Visualization
+## Activity 5: Principles of Data Visualization
 
 Design and creation of data visualizations using real genomic datasets in R, followed by group discussion on best practices and interpretation.
 
-## Activity 5: Ethical Dilemmas 
+## Activity 6: Ethical Dilemmas 
 
 Case studies and group discussions exploring ethical dilemmas and practical challenges faced in computational biology research.
 

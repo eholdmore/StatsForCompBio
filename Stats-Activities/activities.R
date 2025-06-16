@@ -1,6 +1,6 @@
 ### Activities for Statistics for Computational Biology Projects Workshop ###
 ### Erica M. Holdmore ###
-### Last updated: March 26, 2024 ###
+### Last updated: June 16, 2025 ###
 
 #### Activity 1: Power Analysis ####
 
@@ -48,7 +48,75 @@ pwr.anova.test(k=2,            # compare 2 groups (treatment and control)
 ?pwr.chisq.test()
 #pwr.chisq.test(w=, p=, df=1, sig.level=)
 
-#### Activity 3: Multiple Comparisons ####
+#### Activity 3: GLMs in Action ####
+# load packages
+#install.packages(MASS)
+library(MASS)
+
+# Simulate simple biological count data (e.g., gene expression counts)
+set.seed(123)
+n <- 30  # samples per group
+group <- factor(rep(c("control", "treatment"), each = n))
+mu <- ifelse(group == "control", 10, 20)  # mean expression level
+counts <- rpois(2 * n, lambda = mu)
+
+# Quick look at the data
+table(group)
+head(counts)
+
+# Combine into a data frame
+dat <- data.frame(group = group, counts = counts)
+
+# Plot raw counts
+boxplot(counts ~ group, data = dat, main = "Simulated Count Data", ylab = "Gene Expression (counts)")
+
+# Fit a Poisson GLM
+pois_mod <- glm(counts ~ group, family = "poisson", data = dat)
+summary(pois_mod)
+
+# Check for overdispersion (a key concept in DESeq2)
+dispersion <- sum(residuals(pois_mod, type = "pearson")^2) / df.residual(pois_mod)
+dispersion  # >1 suggests overdispersion
+
+# Fit a Negative Binomial GLM
+nb_mod <- glm.nb(counts ~ group, data = dat)
+summary(nb_mod)
+
+# Compare models
+AIC(pois_mod, nb_mod)
+
+# Extract estimated effect size (log fold change)
+coef(nb_mod)
+
+# Interpret:
+# What does the coefficient for 'grouptreatment' mean?
+# Tip: Use exp(coef(nb_mod)["grouptreatment"]) to get the fold-change from the log scale.
+# "The treatment group has ____ times the expected expression compared to the control group."
+
+# Visualize model fits
+library(ggplot2)
+dat$fit_pois <- fitted(pois_mod)
+dat$fit_nb <- fitted(nb_mod)
+
+ggplot(dat, aes(x = group, y = counts)) +
+  geom_jitter(width = 0.2, alpha = 0.5) +
+  stat_summary(fun = mean, geom = "point", color = "blue", size = 3) +
+  geom_point(aes(y = fit_pois), color = "orange", shape = 1) +
+  geom_point(aes(y = fit_nb), color = "green", shape = 2) +
+  labs(title = "Observed vs Fitted Counts", y = "Counts") +
+  theme_minimal()
+
+# Discussion prompts:
+# 1. Why does Poisson underestimate variability?
+# 2. What role does the link function play in GLMs?
+# 3. How does this relate to modeling gene expression in DESeq2?
+
+# Extra challenge:
+# Modify the simulation to add a batch effect or covariate.
+# dat$batch <- rep(c("A", "B"), times = n)
+# Try re-fitting: glm.nb(counts ~ group + batch, data = dat)
+
+#### Activity 4: Multiple Comparisons ####
 
 # Adapted from Quantitative Understanding in Biology: 
 # 1.6 Multiple Hypothesis Testing and Non-parametric Tests, by Jason Banfelder
@@ -97,7 +165,7 @@ which(p.adjust(p.raw, method = 'BH') < 0.05)
 # How many significant outcomes are observed using a Benjamini-Hochberg correction?
 # Are all the significant outcomes those that we know are true positives (first 200)?
 
-#### Activity 4: Data Visualization ####
+#### Activity 5: Data Visualization ####
 
 # Adapted from Genomic Data Visualization and Interpretation. https://genviz.org/
 #install.packages("ggplot2")

@@ -37,6 +37,8 @@ Sullivan, G.M. and Feinn, R., 2012. Using effect size—or why the P value is no
 
 Akalin, A. 2020. Computational Genomics with R. https://compgenomr.github.io/book/
 
+Quinn, G.P. and Keough, M.J., 2002. Experimental Design and Data Analysis for Biologists. Cambridge University Press.
+
 ## Probability & Data Transformations
 
 Nowak, Robert. 2011. Lecture 2: Review of Probability Theory. ECE 830 Statistical Signal Processing. https://nowak.ece.wisc.edu/ece830/ece830_fall11_lecture2.pdf
