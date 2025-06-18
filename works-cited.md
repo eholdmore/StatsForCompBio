@@ -25,6 +25,8 @@ Kunin, Daniel. 2016. Seeing Theory. Chapter 3: Probability Distributions. https:
 
 Lindelev, J. K. 2019. Common statistical tests are linear models. https://lindeloev.github.io/tests-as-linear/ 
 
+Neuberg, D., 2018. Wrangling with P-values. Pediatric Blood & Cancer, 65(1). https://pubmed.ncbi.nlm.nih.gov/28960684/
+
 Scott, James. 2021. Data Science in R: A Gentle Introduction. https://bookdown.org/jgscott/DSGI/
 
 Skidmore, Z., Griffith, M., Griffith, O., and Cotto, K. 2019. Genomic Data Visualization and Interpretation. https://genviz.org/ 
@@ -70,6 +72,8 @@ Fukami, T., and Nick Henderson. W4: GLM with zero-inflated data. Biology 202: Ec
 ## Data Visualization
 
 Cohen-Tanugi, Jess. 2019. Design Principles for Visualization. Havard Kennedy School. https://www.hks.harvard.edu/sites/default/files/Academic%20Dean's%20Office/communications_program/workshop-materials/pp_jess_cohen-tanugi_design_principles_for_visualization_-_2-20-19.pdf
+
+Nicole E Kramer, Eric S Davis, Craig D Wenger, Erika M Deoudes, Sarah M Parker, Michael I Love, Douglas H Phanstiel, Plotgardener: cultivating precise multi-panel figures in R, Bioinformatics, 2022. https://phanstiellab.github.io/plotgardener/index.html
 
 Skidmore, Z., Griffith, M., Griffith, O., and Cotto, K. 2019. Genomic Data Visualization and Interpretation. https://genviz.org/ 
 
