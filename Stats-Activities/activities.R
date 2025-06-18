@@ -160,10 +160,12 @@ hist(p.raw,
 # 0.05 * (3000-200) = 140 false positives in addition to 200 true positives
 
 # Now we can try different correction methods and see how many/which outcomes are significant.
+# Method 1: Bonferroni - controls FWER; very stringent
 sum(p.adjust(p.raw, method = 'bonferroni') < 0.05)
 which(p.adjust(p.raw, method = 'bonferroni') < 0.05)
 # How many significant outcomes are observed using a Bonferroni correction?
 # Are all the significant outcomes those that we know are true positives (first 200)?
+# Method 2: Benjamini-Hochberg - controls FDR; less conservative
 sum(p.adjust(p.raw, method = 'BH') < 0.05)
 which(p.adjust(p.raw, method = 'BH') < 0.05)
 # How many significant outcomes are observed using a Benjamini-Hochberg correction?
