@@ -24,6 +24,7 @@ boxplot(right_outlier, horizontal = TRUE, xlab = "Log2 CN Ratio")
 Q1 <- quantile(right_outlier, 0.25)
 Q3 <- quantile(right_outlier, 0.75)
 IQR <- IQR(right_outlier)
+# define "acceptable" range for values
 multiplier <- 1.5
 lower_bound <- Q1 - (IQR * multiplier)
 upper_bound <- Q3 + (IQR * multiplier)
@@ -44,10 +45,11 @@ ggplot(data_frame, aes(x = seq_along(value), y = value)) +
 library(outliers)
 library(EnvStats)
 grubbs.test(right_outlier)
+# k= number of suspected outliers
 rosnerTest(right_outlier,k = 5)
 
 ## Unsupervised Clustering (DBSCAN)
-# Adaptd from D. Diachkov https://blog.devgenius.io/outlier-detection-in-r-with-dbscan-dd54ebc5404d
+# Adapted from D. Diachkov https://blog.devgenius.io/outlier-detection-in-r-with-dbscan-dd54ebc5404d
 #install.packages("dbscan")
 library(dbscan)
 
@@ -66,6 +68,10 @@ plot(data$time, data$fake_temperature,
      pch = 20)
 
 # run DBSCAN
+# eps: How densely clustered do points have to be
+#      to be considered "neighbors"?
+# minPts: How many "neighbors" does a point need to
+#         have in order to be a "core point"?
 dbscan_result <- dbscan(data, eps = 6, minPts = 4)
 dbscan_result
 
