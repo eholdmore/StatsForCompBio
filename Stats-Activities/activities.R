@@ -23,19 +23,19 @@ pwr.anova.test(k=2,            # compare 2 groups (treatment and control)
 # one-way ANOVA
 # See example above.
 ?pwr.anova.test()
-#pwr.anova.test(k=,f=,sig.level=,power=)
+pwr.anova.test(k=2,f=0.25,sig.level=0.05,power=0.8)
 
 # GLM
 # Note: instead of groups (k), this command requires degrees of freedom for the
 # numerator (in our case u = 2-1 = 1); v will be the min. sample size.
 ?pwr.f2.test()
-#pwr.f2.test(u=, f2=, sig.level=, power=)
+pwr.f2.test(u=1, f2=0.25, sig.level=0.05, power=0.8)
 
 # paired t-test (two tailed)
 # Note: for this test, you will need to enter some additional info about
 # the type of test (type="paired") and alt. hypothesis (alternative="two.sided")
 ?pwr.t.test()
-#pwr.t.test(d=, sig.level=, power=, type=, alternative=)
+pwr.t.test(d=0.25, sig.level=0.05, power=0.8, type="paired", alternative="two.sided")
 
 # independent t-test (one tailed - "greater")
 # Note: this one is more tricky - since it is an unbalanced test, it requires
@@ -44,13 +44,13 @@ pwr.anova.test(k=2,            # compare 2 groups (treatment and control)
 # values to see how you can achieve a power of 80%.
 # What happens when you decrease the total sample size (n1+n2)?
 ?pwr.t2n.test()
-#pwr.t2n.test(d=, n1=, n2=, sig.level=, alternative=)
+pwr.t2n.test(d=0.25, n1=100, n2=300, sig.level=0.05, alternative="greater")
 
 # chi-squared test
 # Note: for this test, will need to include the numerator degrees of freedom
 # as you did with the GLM power analysis (see above)
 ?pwr.chisq.test()
-#pwr.chisq.test(w=, p=, df=1, sig.level=)
+pwr.chisq.test(w=0.25, p=0.8, df=1, sig.level=0.05)
 
 #### Activity 3: GLMs in Action ####
 # load packages
@@ -96,6 +96,7 @@ coef(nb_mod)
 # What does the coefficient for 'grouptreatment' mean?
 # Tip: Use exp(coef(nb_mod)["grouptreatment"]) to get the fold-change from the log scale.
 # "The treatment group has ____ times the expected expression compared to the control group."
+exp(coef(nb_mod)["grouptreatment"])
 
 # Visualize model fits
 library(ggplot2)
@@ -292,12 +293,9 @@ cnData <- do.call("rbind", cnData)
 
 # Here's a place to start plotting:
 cnFreq(cnData, genome="hg19")
-# Alternatively, focus on one gene
+# Alternatively, focus on one chromosome
 layer1 <- geom_vline(xintercept=c(39709170))
 cnFreq(cnData, genome="hg19", plotChr="chr17", plotLayer=layer1)
-
-# Check out what else genCov() can do
-?geom_violin()
 
 # Try playing around with options to make changes to the plot above (color, labels, etc.)
 
